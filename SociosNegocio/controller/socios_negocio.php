@@ -13,8 +13,8 @@
     header('Content-type:application/json');
 
 
-    require_once("../config/conexion.php");
-    require_once("..SociosNegocio/models/Socios_negocio.php");
+    require_once("C:/xampp/htdocs/G9_20/config/conexion.php");
+    require_once("C:/xampp/htdocs/G9_20/SociosNegocio/models/Socios_negocio.php");
     
 
     
