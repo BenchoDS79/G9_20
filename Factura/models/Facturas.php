@@ -38,8 +38,8 @@
             $conectar=parent::conexion();
             parent::set_names();
             $sql= "UPDATE ma_facturas
-            SET NUMERO_FACTURA=?, ID_SOCIO=?, FECHA_FACTURA=? ,DETALLE=?,SUB_TOTAL=? TOTAL_ISV=?, TOTAL=? ,FECHA_VENCIMIENTO=?, ESTADO=?
-            WHERE id = ?;";
+            SET NUMERO_FACTURA=?, ID_SOCIO=?, FECHA_FACTURA=?, DETALLE=?, SUB_TOTAL=?, TOTAL_ISV=?, TOTAL=?, FECHA_VENCIMIENTO=?, ESTADO=?
+            WHERE ID = ?;";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $NUMERO_FACTURA);
             $sql->bindValue(2, $ID_SOCIO);
@@ -53,7 +53,7 @@
             $sql->bindValue(10, $id);
             $sql->execute();
             return $resultado=$sql->fetchALL(PDO::FETCH_ASSOC);
-          }
+        }
         
           public function delete_factura($id){
             $conectar=parent::conexion();

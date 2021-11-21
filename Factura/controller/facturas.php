@@ -34,9 +34,9 @@
         echo json_encode("Factura Agragada");
     break;
     case "UpdateFactura":
-        $datos=$facturas->update_factura($body["id"],$body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],
-        $body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"],$body["ESTADO"]);
+        $datos=$facturas->update_factura($body["ID"],$body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"],$body["ESTADO"]);
         echo json_encode("Factura Actualizada");
+    break;
     break;
     case "DeleteFactura":
         $datos=$facturas->delete_factura($body["ID"]);
