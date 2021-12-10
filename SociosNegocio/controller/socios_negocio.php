@@ -12,12 +12,9 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-type:application/json');
 
-
     require_once("../../config/conexion.php");
     require_once("../../SociosNegocio/models/Socios_negocio.php");
-    
-
-    
+   
     $socio_negocio = new Socios_negocio();
 
     $body = json_decode(file_get_contents("php://input"), true);
