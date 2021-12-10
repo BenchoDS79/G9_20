@@ -27,22 +27,22 @@
      break;
 
      case "GetUno": 
-        $datos=$facturas->get_factura($body["id"]);
+        $datos=$facturas->get_factura($body["ID"]);
         echo json_encode($datos);
      break;
      
      case "InsertFactura":
-        $datos=$facturas->insert_factura($body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],
-        $body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"]);
+        $datos=$facturas->insert_factura($body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"]);
         echo json_encode("Factura Agragada");
     break;
+
     case "UpdateFactura":
         $datos=$facturas->update_factura($body["ID"],$body["NUMERO_FACTURA"],$body["ID_SOCIO"],$body["FECHA_FACTURA"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_VENCIMIENTO"],$body["ESTADO"]);
         echo json_encode("Factura Actualizada");
     break;
     break;
     case "DeleteFactura":
-        $datos=$facturas->delete_factura($body["id"]);
+        $datos=$facturas->delete_factura($body["ID"]);
         echo json_encode("Factura Eliminada");
     break;
     }
